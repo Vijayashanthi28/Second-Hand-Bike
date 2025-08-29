@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+     <nav class="navbar">
+        <div class="logo">
+            <img src="nav logo.png">
+        </div>
+        
+        <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="buy.html">Buy Bike</a></li>
+            <li><a href="sellbike.html">Sell Bike</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        
+        <div class="navright-section">
+          <a href="login.html"> <button class="login-btn">Login</button></a> 
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+    </nav>
+      <div class="main-wrapper">
+        <!-- Contact Form Section -->
+        <div class="form-panel">
+            <h1 class="page-heading">Contact Us</h1>
+            
+            <form id="enquiryForm">
+                <div class="input-wrapper">
+                    <input type="text" class="text-field" placeholder="Name" required>
+                </div>
+                
+                <div class="input-wrapper">
+                    <input type="email" class="text-field" placeholder="E-mail Address" required>
+                </div>
+                
+                <div class="input-wrapper">
+                    <input type="tel" class="text-field" placeholder="Phone Number" required>
+                </div>
+                
+                <div class="input-wrapper">
+                    <div class="select-wrapper">
+                        <button type="button" class="select-trigger" id="purposeSelector">
+                            <span>Reason to Contact</span>
+                            <span class="caret-icon">▼</span>
+                        </button>
+                        <div class="options-list" id="purposeOptions">
+                            <div class="option-item" data-value="general">General Enquiry</div>
+                            <div class="option-item" data-value="buy">Buy a Bike</div>
+                            <div class="option-item" data-value="sell">Sell a Bike</div>
+                            <div class="option-item" data-value="exchange">Exchange a Bike</div>
+                            <div class="option-item" data-value="rto">RTO Service</div>
+                            <div class="option-item" data-value="others">Others</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="input-wrapper">
+                    <div class="select-wrapper">
+                        <button type="button" class="select-trigger" id="referralSelector">
+                            <span>How did you find out about us ?</span>
+                            <span class="caret-icon">▼</span>
+                        </button>
+                        <div class="options-list" id="referralOptions">
+                            <div class="option-item" data-value="olx">OLX</div>
+                            <div class="option-item" data-value="instagram">Instagram</div>
+                            <div class="option-item" data-value="youtube">Youtube</div>
+                            <div class="option-item" data-value="google">Google</div>
+                            <div class="option-item" data-value="website">Website</div>
+                            <div class="option-item" data-value="facebook">Facebook</div>
+                            <div class="option-item" data-value="walkin">Walk -in</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="input-wrapper">
+                    <textarea class="text-area" placeholder="Message" rows="5"></textarea>
+                </div>
+                
+                <button type="submit" class="submit-button">Send</button>
+            </form>
+        </div>
+
+        <!-- Map Section -->
+        <div class="location-panel">
+            <div class="map-wrapper">
+                <div class="map-bar">
+                    <span class="business-name">Drive RP <br><span style="color:blue;">View Larger Map</span> </span>
+                    
+                </div>
+                
+                <div class="map-canvas" id="interactiveMap">
+                    <div class="marker-pin"></div>
+                     </div>
+                
+                <div class="zoom-controls">
+                    <button class="zoom-btn" id="zoomInBtn">+</button>
+                    <button class="zoom-btn" id="zoomOutBtn">−</button>
+                </div>
+            </div>
+            
+            <div class="contact-details">
+                <div class="location-heading">Address:</div>
+                <div class="location-address">
+                 <i class="fa-solid fa-location-dot"></i>    51,Rajaji Street,<br>
+                    GST Road,<br>
+                    Chengalpattu-603104.<br>
+                    TamilNadu, India.
+                </div>
+                <div class="contact-links">
+                    <div class="info-row">
+                        <div class="info-icon"><i class="fa-solid fa-globe"></i></div>
+                        <span>www.DriveRp.in</span>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+                        <span>+91 987 952 1234</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal-backdrop" id="successModal">
+        <div class="modal-box">
+            <div class="success-symbol">✓</div>
+            <div class="modal-heading">Message Sent!</div>
+            <div class="modal-text">Thank you for contacting us. We'll get back to you soon.</div>
+            <button class="close-modal" onclick="hideSuccessModal()">OK</button>
+        </div>
+    </div>
+
+
+      <footer class="footer-wrapper">
+        <div class="footer-container">
+            <!-- Brand and Social Section -->
+            <div class="brand-section">
+                <div class="brand-logo"><img src="footer logo.png"></div>
+                <div class="social-section">
+                    <div class="social-label">Get in touch</div>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon "><img src="whatsapp.jpg"></a>
+                        <a href="#" class="social-icon "><img src="youtube.png"></a>
+                        <a href="#" class="social-icon "><img src="insta.jpg"></a>
+                        <a href="#" class="social-icon "><img src="facebook.png"></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="navigation-section">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="contact.html" class="nav-link">Contact Us</a>
+                <a href="buy.html" class="nav-link">Buy Bike</a>
+                <a href="sellbike.html" class="nav-link">Sell Bike</a>
+            </div>
+
+            <!-- Categories Section -->
+            <div class="categories-section">
+                <a href="#" class="category-link">Electric Two-Wheelers</a>
+                <a href="#" class="category-link">Motorcycles</a>
+                <a href="#" class="category-link">Scooters</a>
+                <a href="#" class="category-link">Mopeds</a>
+                <a href="#" class="category-link">ATV</a>
+                <a href="#" class="category-link">Custom Bikes</a>
+                <div class="footbike-image"></div>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="contact-section">
+                <h3 class="contact-title">Address:</h3>
+                <div class="address-item">
+                    <span class="address-icon"><i class="fa-solid fa-location-dot"></i></span>
+                    <div class="address-text">
+                        51,Rajaji Street,<br>
+                        GST Road,<br>
+                        Chengalpattu-603104
+                    </div>
+                </div>
+                <div class="address-item">
+                    <span class="address-icon"><i class="fa-solid fa-globe"></i></span>
+                    <a href="#" class="website-link address-text">www.DriveRp.in</a>
+                </div>
+                <div class="address-item">
+                    <span class="address-icon"><i class="fa-solid fa-phone"></i></span>
+                    <div class="address-text phone-number">+91 987 952 1234</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+         //Contact Form
+
+        // Dropdown functionality
+        function initializeSelector(buttonId, menuId) {
+            const button = document.getElementById(buttonId);
+            const menu = document.getElementById(menuId);
+            const options = menu.querySelectorAll('.option-item');
+            
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                button.classList.toggle('opened');
+                menu.classList.toggle('visible');
+                
+                // Close other dropdowns
+                document.querySelectorAll('.select-trigger').forEach(btn => {
+                    if (btn !== button) {
+                        btn.classList.remove('opened');
+                    }
+                });
+                document.querySelectorAll('.options-list').forEach(m => {
+                    if (m !== menu) {
+                        m.classList.remove('visible');
+                    }
+                });
+            });
+            
+            options.forEach(option => {
+                option.addEventListener('click', () => {
+                    const value = option.getAttribute('data-value');
+                    const text = option.textContent;
+                    button.querySelector('span').textContent = text;
+                    button.classList.remove('opened');
+                    menu.classList.remove('visible');
+                });
+            });
+        }
+
+        // Setup both selectors
+        initializeSelector('purposeSelector', 'purposeOptions');
+        initializeSelector('referralSelector', 'referralOptions');
+
+        // Close selectors when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.select-wrapper')) {
+                document.querySelectorAll('.select-trigger').forEach(btn => {
+                    btn.classList.remove('opened');
+                });
+                document.querySelectorAll('.options-list').forEach(menu => {
+                    menu.classList.remove('visible');
+                });
+            }
+        });
+
+        // Map zoom functionality
+        let currentZoom = 1;
+        const mapCanvas = document.getElementById('interactiveMap');
+
+        document.getElementById('zoomInBtn').addEventListener('click', () => {
+            if (currentZoom < 3) {
+                currentZoom += 0.2;
+                mapCanvas.style.transform = `scale(${currentZoom})`;
+            }
+        });
+
+        document.getElementById('zoomOutBtn').addEventListener('click', () => {
+            if (currentZoom > 0.5) {
+                currentZoom -= 0.2;
+                mapCanvas.style.transform = `scale(${currentZoom})`;
+            }
+        });
+
+        // Form submission
+        document.getElementById('enquiryForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            displaySuccessModal();
+        });
+
+        function displaySuccessModal() {
+            document.getElementById('successModal').style.display = 'flex';
+        }
+
+        function hideSuccessModal() {
+            document.getElementById('successModal').style.display = 'none';
+            // Reset form
+            document.getElementById('enquiryForm').reset();
+            // Reset selector texts
+            document.getElementById('purposeSelector').querySelector('span').textContent = 'Reason to Contact';
+            document.getElementById('referralSelector').querySelector('span').textContent = 'How did you find out about us ?';
+        }
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>

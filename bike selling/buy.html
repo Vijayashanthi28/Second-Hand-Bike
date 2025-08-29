@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+ <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+     <nav class="navbar">
+        <div class="logo">
+            <img src="nav logo.png">
+        </div>
+        
+        <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="buy.html">Buy Bike</a></li>
+            <li><a href="sellbike.html">Sell Bike</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        
+        <div class="navright-section">
+          <a href="login.html"> <button class="login-btn">Login</button></a> 
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+    </nav>
+
+      <div class="main-container">
+        <!-- Left Sidebar Filters -->
+        <div class="filter-sidebar">
+            <div class="filter-title">Filter</div>
+            
+            <!-- Budget Filter -->
+            <div class="filter-section">
+                <div class="filter-header" onclick="toggleFilter('budget')">
+                    <span>Budget</span>
+                    <span class="filter-arrow" id="budget-arrow">▼</span>
+                </div>
+                <div class="filter-content" id="budget-content">
+                    <div class="range-container">
+                        <div class="range-values">
+                            <span>10000</span>
+                            <span>200000</span>
+                        </div>
+                        <input type="range" class="range-slider" min="10000" max="200000" value="100000">
+                        <div class="range-labels">
+                            <span>Minimum</span>
+                            <span>Maximum</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Categories Filter -->
+            <div class="filter-section">
+                <div class="filter-header" onclick="toggleFilter('categories')">
+                    <span>Categories</span>
+                    <span class="filter-arrow" id="categories-arrow">▼</span>
+                </div>
+                <div class="filter-content" id="categories-content">
+                    <div class="category-options">
+                        <div class="category-item">
+                            <div class="category-icon"><img src="scooty.png"></div>
+                            <span>Scooty</span>
+                        </div>
+                        <div class="category-item">
+                            <div class="category-icon"><img src="bike.png"></div>
+                            <span>Motor bike</span>
+                        </div>
+                        <div class="category-item">
+                            <div class="category-icon"><img src="ev.png"></div>
+                            <span>EVs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Brand Filter -->
+            <div class="filter-section">
+                <div class="filter-header" onclick="toggleFilter('brand')">
+                    <span>Brand</span>
+                    <span class="filter-arrow" id="brand-arrow">▼</span>
+                </div>
+                <div class="filter-content" id="brand-content">
+                    <ul class="brand-list">
+                        <li>TVS</li>
+                        <li>Honda</li>
+                        <li>Bajaj</li>
+                        <li>Hero</li>
+                        <li>Royal Enfield</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Year Filter -->
+            <div class="filter-section">
+                <div class="filter-header" onclick="toggleFilter('year')">
+                    <span>Year</span>
+                    <span class="filter-arrow" id="year-arrow">▼</span>
+                </div>
+                <div class="filter-content" id="year-content">
+                    <div class="range-container">
+                        <div class="range-values">
+                            <span>2007</span>
+                            <span>2025</span>
+                        </div>
+                        <input type="range" class="range-slider" min="2007" max="2025" value="2016">
+                        <div class="range-labels">
+                            <span>Minimum Year</span>
+                            <span>Maximum Year</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kilometers Filter -->
+            <div class="filter-section">
+                <div class="filter-header" onclick="toggleFilter('kilometers')">
+                    <span>Kilometers</span>
+                    <span class="filter-arrow" id="kilometers-arrow">▼</span>
+                </div>
+                <div class="filter-content" id="kilometers-content">
+                    <div class="km-input-container">
+                        <input type="text" class="km-input" placeholder="Under 100000" value="Under 100000">
+                        <span>Km</span>
+                        <div class="range-container">
+                            <input type="range" class="range-slider" min="0" max="100000" value="50000">
+                            <div class="range-labels">
+                                <span>0</span>
+                                <span>100000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EngineTrim CC Filter -->
+            <div class="filter-section">
+                <div class="filter-header" onclick="toggleFilter('engine')">
+                    <span>EngineTrim CC</span>
+                    <span class="filter-arrow" id="engine-arrow">▼</span>
+                </div>
+                <div class="filter-content" id="engine-content">
+                    <ul class="engine-options">
+                        <li>Below 100 CC</li>
+                        <li>Below 200 CC</li>
+                        <li>Below 300 CC</li>
+                        <li>Below 400 CC</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Fuel Type Filter -->
+            <div class="filter-section">
+                <div class="filter-header" onclick="toggleFilter('fuel')">
+                    <span>Fuel Type</span>
+                    <span class="filter-arrow" id="fuel-arrow">▼</span>
+                </div>
+                <div class="filter-content" id="fuel-content">
+                    <ul class="engine-options">
+                        <li>Petrol</li>
+                        <li>Electric</li>
+                        <li>Diesel</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Color Filter -->
+            <div class="filter-section">
+                <div class="filter-header" onclick="toggleFilter('color')">
+                    <span>Color</span>
+                    <span class="filter-arrow" id="color-arrow">▼</span>
+                </div>
+                <div class="filter-content" id="color-content">
+                    <ul class="engine-options">
+                        <li>Red</li>
+                        <li>Blue</li>
+                        <li>Black</li>
+                        <li>White</li>
+                        <li>Silver</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Content Area -->
+        <div class="buycontent-area">
+            <!-- Header with Results Count and Sort -->
+            <div class="buycontent-header">
+                <div class="results-count">72 Bikes In Tamil Nadu</div>
+                <div class="sort-section">
+                    <span class="sort-label">Sort By</span>
+                    <div class="sort-dropdown">
+                        <div class="sort-button" onclick="toggleSortDropdown()">
+                            <span id="selected-sort">Newest First</span>
+                            <span>▼</span>
+                        </div>
+                        <div class="sort-options" id="sort-options">
+                            <div class="sort-option" onclick="selectSort('Newest First')">Newest First</div>
+                            <div class="sort-option" onclick="selectSort('Price - Low to High')">Price - Low to High</div>
+                            <div class="sort-option" onclick="selectSort('Price - High to Low')">Price - High to Low</div>
+                            <div class="sort-option" onclick="selectSort('KM Driven - Low to High')">KM Driven - Low to High</div>
+                            <div class="sort-option" onclick="selectSort('KM Driven - High to Low')">KM Driven - High to Low</div>
+                            <div class="sort-option" onclick="selectSort('Year - old to New')">Year - old to New</div>
+                            <div class="sort-option" onclick="selectSort('Year - New to Old')">Year - New to Old</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bike Grid -->
+            <div class="buybike-grid">
+                <!-- Bike Card 1 -->
+                <div class="buybike-card">
+                    <div class="buybike-image">
+                      <a href="payment.html" style="text-decoration: none;"> <div class="buybike-placeholder"><img src="buy1.png"></div>
+                       
+                    </div>
+                    <div class="buybike-details">
+                        <div class="buybike-title">2023 | Yamaha MT 15 | 150CC BS6</div></a> 
+                        <div class="buybike-specs">
+                            <div class="spec-item"><i class="fa-solid fa-gauge-simple-high"></i> 8700 Km</div>
+                            <div class="spec-item"> Petrol</div>
+                            <div class="spec-item"> 1st Owner</div>
+                        </div>
+                        <div class="buybike-price">₹ 1,15,000</div>
+                        <div class="buybike-location"><i class="fa-solid fa-location-dot"></i> Thirunelvelli</div>
+                    </div>
+                </div>
+
+                <!-- Bike Card 2 -->
+                <div class="buybike-card">
+                    <div class="buybike-image">
+                       <a href="suzuki.html" style="text-decoration: none;">  <div class="buybike-placeholder"><img src="buy 2.png"></div>
+                        
+                    </div>
+                    <div class="buybike-details">
+                        <div class="buybike-title">2013 | Susuki Access | 125 CC</div></a> 
+                        <div class="buybike-specs">
+                            <div class="spec-item"><i class="fa-solid fa-gauge-simple-high"></i> 2600 Km</div>
+                            <div class="spec-item"> Petrol</div>
+                            <div class="spec-item"> 2st Owner</div>
+                        </div>
+                        <div class="buybike-price">₹ 30,000</div>
+                        <div class="buybike-location"><i class="fa-solid fa-location-dot"></i> Kanchipuram</div>
+                    </div>
+                </div>
+
+                <!-- Bike Card 3 -->
+                <div class="buybike-card">
+                    <div class="buybike-image">
+                       <a href="payment.html" style="text-decoration: none;">  <div class="buybike-placeholder"><img src="buy 3.png"></div>
+                       
+                    </div>
+                    <div class="buybike-details">
+                        <div class="buybike-title">2020 | Royal Enfield - Himalayan | 410CC FTS</div></a> 
+                        <div class="buybike-specs">
+                            <div class="spec-item"><i class="fa-solid fa-gauge-simple-high"></i> 23700 Km</div>
+                            <div class="spec-item"> Petrol</div>
+                            <div class="spec-item"> 1st Owner</div>
+                        </div>
+                        <div class="buybike-price">₹ 2,50,000</div>
+                        <div class="buybike-location"><i class="fa-solid fa-location-dot"></i> Karur</div>
+                    </div>
+                </div>
+
+                <!-- Bike Card 4 (Booked) -->
+                <div class="buybike-card">
+                    <div class="buybike-image">
+                        <div class="booked-badge">Booked</div>
+                  <a href="payment.html" style="text-decoration: none;">       <div class="buybike-placeholder"><img src="buy4.png"></div>
+                      
+                    </div>
+                    <div class="buybike-details">
+                        <div class="buybike-title">2022 | OLA s1 Pro | </div></a> 
+                        <div class="buybike-specs">
+                            <div class="spec-item"><i class="fa-solid fa-gauge-simple-high"></i> 2100 Km</div>
+                            <div class="spec-item"> Electric</div>
+                            <div class="spec-item"> 1st Owner</div>
+                        </div>
+                        <div class="buybike-price">₹ 90,000</div>
+                        <div class="buybike-location"><i class="fa-solid fa-location-dot"></i> Chengai</div>
+                    </div>
+                </div>
+
+                <!-- Bike Card 5 -->
+                <div class="buybike-card">
+                    <div class="buybike-image">
+                    <a href="payment.html" style="text-decoration: none;">    <div class="buybike-placeholder"><img src="buy 5.png"></div>
+                       
+                    </div>
+                    <div class="buybike-details">
+                        <div class="buybike-title">2010 | Bajaj Pulsar LS | 135</div></a>  
+                        <div class="buybike-specs">
+                            <div class="spec-item"><i class="fa-solid fa-gauge-simple-high"></i> 9000 Km</div>
+                            <div class="spec-item"> Petrol</div>
+                            <div class="spec-item"> 3st Owner</div>
+                        </div>
+                        <div class="buybike-price">₹ 25,000</div>
+                        <div class="buybike-location"><i class="fa-solid fa-location-dot"></i> Dindigal</div>
+                    </div>
+                </div>
+
+                <!-- Bike Card 6 -->
+                <div class="buybike-card">
+                    <div class="buybike-image">
+                    <a href="payment.html" style="text-decoration: none;">    <div class="buybike-placeholder"><img src="buy6.png"></div>
+                      
+                    </div>
+                    <div class="buybike-details">
+                        <div class="buybike-title">2020 | Aprilia SXR | 125CC</div></a>  
+                        <div class="buybike-specs">
+                            <div class="spec-item"><i class="fa-solid fa-gauge-simple-high"></i> 8700 Km</div>
+                            <div class="spec-item"> Petrol</div>
+                            <div class="spec-item"> 1st Owner</div>
+                        </div>
+                        <div class="buybike-price">₹ 1,05,000</div>
+                        <div class="buybike-location"><i class="fa-solid fa-location-dot"></i> Madurai</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+      <footer class="footer-wrapper">
+        <div class="footer-container">
+            <!-- Brand and Social Section -->
+            <div class="brand-section">
+                <div class="brand-logo"><img src="footer logo.png"></div>
+                <div class="social-section">
+                    <div class="social-label">Get in touch</div>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon "><img src="whatsapp.jpg"></a>
+                        <a href="#" class="social-icon "><img src="youtube.png"></a>
+                        <a href="#" class="social-icon "><img src="insta.jpg"></a>
+                        <a href="#" class="social-icon "><img src="facebook.png"></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="navigation-section">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="contact.html" class="nav-link">Contact Us</a>
+                <a href="buy.html" class="nav-link">Buy Bike</a>
+                <a href="sellbike.html" class="nav-link">Sell Bike</a>
+            </div>
+
+            <!-- Categories Section -->
+            <div class="categories-section">
+                <a href="#" class="category-link">Electric Two-Wheelers</a>
+                <a href="#" class="category-link">Motorcycles</a>
+                <a href="#" class="category-link">Scooters</a>
+                <a href="#" class="category-link">Mopeds</a>
+                <a href="#" class="category-link">ATV</a>
+                <a href="#" class="category-link">Custom Bikes</a>
+                <div class="footbike-image"></div>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="contact-section">
+                <h3 class="contact-title">Address:</h3>
+                <div class="address-item">
+                    <span class="address-icon"><i class="fa-solid fa-location-dot"></i></span>
+                    <div class="address-text">
+                        51,Rajaji Street,<br>
+                        GST Road,<br>
+                        Chengalpattu-603104
+                    </div>
+                </div>
+                <div class="address-item">
+                    <span class="address-icon"><i class="fa-solid fa-globe"></i></span>
+                    <a href="#" class="website-link address-text">www.DriveRp.in</a>
+                </div>
+                <div class="address-item">
+                    <span class="address-icon"><i class="fa-solid fa-phone"></i></span>
+                    <div class="address-text phone-number">+91 987 952 1234</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

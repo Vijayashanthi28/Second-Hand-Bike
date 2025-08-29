@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+     <nav class="navbar">
+        <div class="logo">
+            <img src="nav logo.png">
+        </div>
+        
+        <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="buy.html">Buy Bike</a></li>
+            <li><a href="sellbike.html">Sell Bike</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        
+        <div class="navright-section">
+          <a href="login.html"> <button class="login-btn">Login</button></a> 
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+    </nav>
+    
+
+     <!-- Main Payment Container -->
+    <div class="payment-container">
+        <!-- Payment Method Selection -->
+        <div class="payment-selector-card">
+            <h2 class="payment-card-title">Select Payment Method</h2>
+            <ul class="payment-option-list">
+                <li class="payment-option-item" onclick="selectPaymentMethod('card')">
+                    <div class="payment-option-content">
+                        <span class="payment-option-text">Credit Card/ Debit Card</span>
+                    </div>
+                    <div class="payment-radio-btn" id="card-radio"></div>
+                </li>
+                
+                <li class="payment-option-item" onclick="selectPaymentMethod('netbanking')">
+                    <div class="payment-option-content">
+                        <span class="payment-option-text">NetBanking</span>
+                    </div>
+                    <div class="payment-radio-btn" id="netbanking-radio"></div>
+                </li>
+                
+                <li class="payment-option-item" onclick="selectPaymentMethod('gpay')">
+                    <div class="payment-option-content">
+                        <div class="payment-logo "><img src="gpay.png"></div>
+                        <span class="payment-option-text">GPay</span>
+                    </div>
+                    <div class="payment-radio-btn" id="gpay-radio"></div>
+                </li>
+                
+                <li class="payment-option-item" onclick="selectPaymentMethod('paytm')">
+                    <div class="payment-option-content">
+                        <div class="payment-logo "><img src="paytm.png"></div>
+                        <span class="payment-option-text">Paytm</span>
+                    </div>
+                    <div class="payment-radio-btn selected" id="paytm-radio"></div>
+                </li>
+                
+                <li class="payment-option-item" onclick="selectPaymentMethod('phonepay')">
+                    <div class="payment-option-content">
+                        <div class="payment-logo "><img src="phpay.png"></div>
+                        <span class="payment-option-text">Phonepay</span>
+                    </div>
+                    <div class="payment-radio-btn" id="phonepay-radio"></div>
+                </li>
+                
+                <li class="payment-option-item" onclick="selectPaymentMethod('amazonpay')">
+                    <div class="payment-option-content">
+                        <div class="payment-logo "><img src="amazon.png"></div>
+                        <span class="payment-option-text">Amazonpay</span>
+                    </div>
+                    <div class="payment-radio-btn" id="amazonpay-radio"></div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Payment Summary -->
+        <div class="payment-summary-card">
+            <div class="summary-row">
+                <span class="summary-label">SubTotal</span>
+                <span class="summary-value">Rs.3000.00</span>
+            </div>
+            
+            <div class="summary-row">
+                <span class="summary-label">GST Tax</span>
+                <span class="summary-value">Rs.1000.00</span>
+            </div>
+            
+            <div class="summary-row">
+                <span class="summary-label">Test Drive</span>
+                <span class="summary-value">Rs.1000.00</span>
+            </div>
+            
+            <div class="summary-divider"></div>
+            
+            <div class="total-row">
+                <span>Grand Total</span>
+                <span>Rs.32000.00</span>
+            </div>
+            
+            <button class="confirm-payment-btn" onclick="showSuccessModal()">
+                Confirm Payment
+            </button>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal-backdrop" id="successModal">
+        <div class="success-modal">
+            <button class="modal-close-btn" onclick="hideSuccessModal()">&times;</button>
+            
+            <div class="modal-character">
+                <img src="bike-biker.gif">
+    </div>
+             
+            
+            <h2 class="modal-success-title">Booking Confirmed</h2>
+            <p class="modal-success-subtitle">The Bike is Your Enjoy Your Journey</p>
+        </div>
+    </div>
+    </div>
+
+
+      <footer class="footer-wrapper">
+        <div class="footer-container">
+            <!-- Brand and Social Section -->
+            <div class="brand-section">
+                <div class="brand-logo"><img src="footer logo.png"></div>
+                <div class="social-section">
+                    <div class="social-label">Get in touch</div>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon "><img src="whatsapp.jpg"></a>
+                        <a href="#" class="social-icon "><img src="youtube.png"></a>
+                        <a href="#" class="social-icon "><img src="insta.jpg"></a>
+                        <a href="#" class="social-icon "><img src="facebook.png"></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="navigation-section">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="contact.html" class="nav-link">Contact Us</a>
+                <a href="buy.html" class="nav-link">Buy Bike</a>
+                <a href="sellbike.html" class="nav-link">Sell Bike</a>
+            </div>
+
+            <!-- Categories Section -->
+            <div class="categories-section">
+                <a href="#" class="category-link">Electric Two-Wheelers</a>
+                <a href="#" class="category-link">Motorcycles</a>
+                <a href="#" class="category-link">Scooters</a>
+                <a href="#" class="category-link">Mopeds</a>
+                <a href="#" class="category-link">ATV</a>
+                <a href="#" class="category-link">Custom Bikes</a>
+                <div class="footbike-image"></div>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="contact-section">
+                <h3 class="contact-title">Address:</h3>
+                <div class="address-item">
+                    <span class="address-icon"><i class="fa-solid fa-location-dot"></i></span>
+                    <div class="address-text">
+                        51,Rajaji Street,<br>
+                        GST Road,<br>
+                        Chengalpattu-603104
+                    </div>
+                </div>
+                <div class="address-item">
+                    <span class="address-icon"><i class="fa-solid fa-globe"></i></span>
+                    <a href="#" class="website-link address-text">www.DriveRp.in</a>
+                </div>
+                <div class="address-item">
+                    <span class="address-icon"><i class="fa-solid fa-phone"></i></span>
+                    <div class="address-text phone-number">+91 987 952 1234</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+   
+
+    <script src="script.js"></script>
+</body>
+</html>

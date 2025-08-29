@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+     <nav class="navbar">
+        <div class="logo">
+            <img src="nav logo.png">
+        </div>
+        
+        <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="buy.html">Buy Bike</a></li>
+            <li><a href="sellbike.html">Sell Bike</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        
+        <div class="navright-section">
+          <a href="login.html"> <button class="login-btn">Login</button></a> 
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+    </nav>
+
+     <section class="bike-showcase-container">
+        
+    <div class="content-wrapper">
+            <div class="text-content-section">
+                <h1 class="primary-title">
+                    Buy or Sell Bikes the Smarter Way
+                </h1>
+                
+                <p class="description-paragraph">
+                    Skip the hassle. Discover verified secondhand bikes at great prices or list your own in minutes. We're here to help you ride more, spend less, and keep bikes moving — from one happy rider to the next.
+                </p>
+                
+                <button class="action-button" onclick="handleBuyNow()">Buy Now</button>
+            </div>
+
+            <div class="bike-display-area">
+                <div class="bike-carousel-container">
+                    
+                    
+                    <div class="bike-slide active-slide">
+                        <img src="in 1.png" 
+                             alt="Red Sport Bike" class="indexbike-image" />
+                    </div>
+                    
+                    <div class="bike-slide">
+                        <img src="in 2.png" 
+                             alt="Blue Mountain Bike" class="indexbike-image" />
+                    </div>
+                    
+                    <div class="bike-slide">
+                        <img src="in 3.png" 
+                             alt="Black Motorcycle" class="indexbike-image" />
+                    </div>
+                    
+                    <div class="bike-slide">
+                        <img src="in 4.png" 
+                             alt="Green Vintage Bike" class="indexbike-image" />
+                    </div>
+                    
+                    <div class="bike-slide">
+                        <img src="in 1.png" 
+                             alt="Yellow Scooter" class="indexbike-image" />
+                    </div>
+                </div>
+                
+                <div class="navigation-dots">
+                    <div class="dot-indicator active-dot" onclick="currentSlide(1)"></div>
+                    <div class="dot-indicator" onclick="currentSlide(2)"></div>
+                    <div class="dot-indicator" onclick="currentSlide(3)"></div>
+                    <div class="dot-indicator" onclick="currentSlide(4)"></div>
+                    <div class="dot-indicator" onclick="currentSlide(5)"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+     <section class="marketplace-container">
+        <div class="bike-illustration-wrapper">
+          <img src="image 74.png">
+        </div>
+
+        <div class="marcontent-section">
+            
+        <p class="description-text">
+                Buying and selling secondhand bikes isn't just a smart financial decision
+                — it's a sustainable one. When you buy a pre-owned bike, you save money 
+                while gaining access to a wider variety of models, often already assembled 
+                and ready to ride. It's an eco-friendly choice that helps reduce manufacturing 
+                waste and supports a circular economy. On the other hand, selling your bike 
+                allows you to earn extra cash, declutter your space, and pass on a reliable 
+                ride to someone new.
+            </p>
+            
+            <a href="#" class="cta-button">Read More</a>
+        </div>
+    </section>
+    
+
+    <div class="support-services-wrapper">
+        <h1 class="main-support-title">Get the Support You Need</h1>
+        
+        <div class="services-container">
+            <!-- Top Row -->
+            <div class="top-row">
+                <!-- 24/7 Support -->
+                <div class="service-item">
+                    <div class="service-circle">
+                        <img src="service 1.jpg" alt="24/7 Support">
+                    </div>
+                    <div class="service-title">24/7 Support</div>
+                    <div class="service-description">Our support team is available 24/7 to assist you. Fast, friendly, and reliable help is just a message away.</div>
+                </div>
+                
+             
+                
+                </div>
+                
+                <!-- Social Media -->
+                <div class="service-item">
+                    <div class="service-circle">
+                        <img src="image 75.png" alt="Social Media">
+                    </div>
+                    <div class="service-title">Social Media</div>
+                    <div class="service-description">Whether you're buying, selling, or just love bikes — there's a place for you in our online community.</div>
+                </div>
+         
+                
+         <!-- Money Security -->
+                <div class="service-item">
+                    <div class="service-circle">
+                        <img src="two-smartphones-transferring-money-to-each-other-free-vector.jpg" alt="Money Security">
+                    </div>
+                    <div class="service-title">100% Money Security</div>
+                    <div class="service-description">No scams, no surprises — just a smooth, trustworthy experience every time.</div>
+                </div>
+                
+             <!-- Blogs -->
+                <div class="service-item">
+                    <div class="service-circle">
+                        <img src="illustration-graphic-cartoon-character-of-blog-vector.jpg" alt="Blogs">
+                    </div>
+                    <div class="service-title">Blogs</div>
+                    <div class="service-description">From guides on buying and selling secondhand bikes, cycling safety, and eco-friendly living, we cover it all.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+     <div class="bikes-showcase-wrapper">
+        <h1 class="showcase-title">Our Few Bikes</h1>
+        
+        <div class="bike-cards-grid">
+            <div class="bike-listing-card">
+                <div class="bike-image-container">
+                  <a href="payment.html" style="text-decoration: none;">  <img src="buy1.png">
+                </div>
+                <div class="bike-details-section">
+                    <div class="bike-model-info">2023 | Yamaha MT 15 | 150CC BS6</div></a>
+                    <div class="bike-specs-row">
+                        <div class="spec-item">
+                            <div class="spec-icon"><i class="fa-solid fa-gauge-simple-high"></i></div>
+                            <span>8700 Km</span>
+                        </div>
+                        <div class="spec-item">
+                            <div class="spec-icon"></div>
+                            <span>Petrol</span>
+                        </div>
+                        <div class="spec-item">
+                            <div class="spec-icon"></div>
+                            <span>1st Owner</span>
+                        </div>
+                    </div>
+                    <div class="bike-price-tag">₹ 1,15,000</div>
+                    <div class="bike-location-info">
+                        <div class="location-pin"><i class="fa-solid fa-location-dot"></i></div>
+                        <span>Thirunelveli</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bike-listing-card">
+                <div class="bike-image-container">
+                <a href="suzuki.html" style="text-decoration: none;">      <img src="buy 2.png">
+                </div>
+                <div class="bike-details-section">
+                    <div class="bike-model-info">2013 | Susuki Access | 125 CC</div></a>
+                    <div class="bike-specs-row">
+                        <div class="spec-item">
+                            <div class="spec-icon"><i class="fa-solid fa-gauge-simple-high"></i></div>
+                            <span>2600 Km</span>
+                        </div>
+                        <div class="spec-item">
+                            <div class="spec-icon"></div>
+                            <span>Petrol</span>
+                        </div>
+                        <div class="spec-item">
+                            <div class="spec-icon"></div>
+                            <span>2st Owner</span>
+                        </div>
+                    </div>
+                    <div class="bike-price-tag">₹ 30,000</div>
+                    <div class="bike-location-info">
+                        <div class="location-pin"><i class="fa-solid fa-location-dot"></i></div>
+                        <span>Kanchipuram</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bike-listing-card">
+                <div class="bike-image-container">
+                 <a href="payment.html" style="text-decoration: none;">     <img src="buy 3.png">
+                </div>
+                <div class="bike-details-section">
+                    <div class="bike-model-info">2020 | Royal Enfield - Himalayan | 410CC FTS</div>
+                    <div class="bike-specs-row">
+                        <div class="spec-item">
+                            <div class="spec-icon"><i class="fa-solid fa-gauge-simple-high"></i></div>
+                            <span>23700 Km</span>
+                        </div>
+                        <div class="spec-item">
+                            <div class="spec-icon"></div>
+                            <span>Petrol</span>
+                        </div>
+                        <div class="spec-item">
+                            <div class="spec-icon"></div>
+                            <span>1st Owner</span>
+                        </div>
+                    </div>
+                    <div class="bike-price-tag">₹ 2,50,000</div>
+                    <div class="bike-location-info">
+                        <div class="location-pin"><i class="fa-solid fa-location-dot"></i></div>
+                        <span>Karur</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="customer-stats-banner">
+            <div class="stats-header">
+                <div class="stats-main-title">Over 15000+ Satisfied Customers</div>
+                <div class="company-brand-logo"><em>DRIVE RP</em></div>
+            </div>
+            <div class="statistics-grid">
+                <div class="stat-item-block">
+                    <div class="stat-number-display">
+                        <div class="stat-icon-graphic "><i class="fa-solid fa-motorcycle"></i></div>
+                        5000+
+                    </div>
+                    <div class="stat-label-text">Bike Purchased</div>
+                </div>
+                <div class="stat-item-block">
+                    <div class="stat-number-display">
+                        <div class="stat-icon-graphic"><i class="fa-solid fa-star"></i></div>
+                        4.5
+                    </div>
+                    <div class="stat-label-text">Average Rating</div>
+                </div>
+                <div class="stat-item-block">
+                    <div class="stat-number-display">
+                        <div class="stat-icon-graphic "><i class="fa-solid fa-certificate"></i></div>
+                        25+
+                    </div>
+                    <div class="stat-label-text">Years Experience</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <div class="testimonial-wrapper">
+        <h1 class="main-heading">Real Stories From our Happy Customer</h1>
+        <p class="sub-heading">Their words drive us forward and inspire others to join the movement.</p>
+        
+        <div class="story-cards-container">
+            <div class="customer-story-card">
+                <img src="test 1.jpg" alt="Sarah M." class="customer-photo">
+                <div class="story-content">
+                    <h3 class="customer-name">Sarah M. – First-Time Buyer</h3>
+                    <p class="customer-quote">"I was nervous about buying a secondhand bike online, but the whole process was smooth and secure. The bike was exactly as described, and the support team was super helpful. I saved money and found a great ride!"</p>
+                </div>
+            </div>
+            
+            <div class="customer-story-card">
+                <img src="test 2.jpg" alt="James R." class="customer-photo">
+                <div class="story-content">
+                    <h3 class="customer-name">James R. – Seller</h3>
+                    <p class="customer-quote">"I had an old mountain bike collecting dust. Listing it took minutes, and it sold within a few days. The payment process was safe and fast — I'll definitely be using this platform again."</p>
+                </div>
+            </div>
+            
+            <div class="customer-story-card">
+                <img src="test 3.png" alt="Priya K." class="customer-photo">
+                <div class="story-content">
+                    <h3 class="customer-name">Priya K. – Daily Commuter</h3>
+                    <p class="customer-quote">"This site makes secondhand feel first-class. I found a quality commuter bike that fits my lifestyle and budget. Plus, it feels good to buy sustainably."</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="trust-section">
+        <div class="trust-content">
+            <h2 class="trust-title">Trusted by Riders Like You</h2>
+            <p class="trust-description">From smooth sales to great secondhand finds, our community loves the ease, security, and savings we offer. Real riders share real stories — and they keep coming back for more.</p>
+        </div>
+        <div class="trust-image-container">
+            <img src="trust.png" alt="Motorcycle rider on scenic road" class="trust-image">
+        </div>
+    </div>
+
+ <h1>Frequently Asked Questions</h1>
+     <div class="faq-container">
+       
+        
+        <div class="faq-container">
+            <div class="faq-item with-answer">
+                <p class="faq-question">1. What happens if a transaction goes wrong?</p>
+                <p class="faq-answer">If a transaction goes wrong, our support team will step in to help resolve the issue. We offer secure payment protection, mediation services, and a refund policy for qualifying cases. Both buyers and sellers can report problems through our dispute resolution system.</p>
+            </div>
+            
+            <div class="faq-item with-answer">
+                <p class="faq-question">2. Are there any restrictions on what I can sell?</p>
+                <p class="faq-answer">Yes, we have guidelines to ensure safe transactions. You can sell bikes, e-bikes, scooters, and related accessories. However, we don't allow stolen goods, damaged items without proper disclosure, or items that don't meet safety standards. Please review our selling policy for complete details.</p>
+            </div>
+            
+            <div class="faq-item with-answer">
+                <p class="faq-question">3. What if the bike I buy isn't as described?</p>
+                <p class="faq-answer">We offer buyer protection and dispute resolution to ensure fair outcomes and peace of mind.</p>
+            </div>
+            
+            <div class="faq-item with-answer">
+                <p class="faq-question">4. How do I know if a bike is in good condition?</p>
+                <p class="faq-answer">We recommend checking detailed photos, reading the description carefully, and asking the seller specific questions. Look for clear images of any wear or damage. Many sellers also provide maintenance records. You can always request additional photos or arrange an in-person inspection before purchase.</p>
+            </div>
+            
+            <div class="faq-item with-answer">
+                <p class="faq-question">5. Can I delete my listing after posting?</p>
+                <p class="faq-answer">Yes, you can delete your listing at any time through your seller dashboard. However, if you have active negotiations or pending offers, we recommend communicating with interested buyers first. Once sold, the listing will automatically be marked as completed.</p>
+            </div>
+            
+            <div class="faq-item with-answer">
+                <p class="faq-question">6. Can I sell bike parts or accessories?</p>
+                <p class="faq-answer">Absolutely! You can sell bike parts, accessories, helmets, lights, locks, and other cycling-related items. Just make sure to provide clear photos and accurate descriptions of the condition and compatibility of your items.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="footer-wrapper">
+        <div class="footer-container">
+            <!-- Brand and Social Section -->
+            <div class="brand-section">
+                <div class="brand-logo"><img src="footer logo.png"></div>
+                <div class="social-section">
+                    <div class="social-label">Get in touch</div>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon "><img src="whatsapp.jpg"></a>
+                        <a href="#" class="social-icon "><img src="youtube.png"></a>
+                        <a href="#" class="social-icon "><img src="insta.jpg"></a>
+                        <a href="#" class="social-icon "><img src="facebook.png"></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="navigation-section">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="contact.html" class="nav-link">Contact Us</a>
+                <a href="buy.html" class="nav-link">Buy Bike</a>
+                <a href="sellbike.html" class="nav-link">Sell Bike</a>
+            </div>
+
+            <!-- Categories Section -->
+            <div class="categories-section">
+                <a href="#" class="category-link">Electric Two-Wheelers</a>
+                <a href="#" class="category-link">Motorcycles</a>
+                <a href="#" class="category-link">Scooters</a>
+                <a href="#" class="category-link">Mopeds</a>
+                <a href="#" class="category-link">ATV</a>
+                <a href="#" class="category-link">Custom Bikes</a>
+                <div class="footbike-image"></div>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="contact-section">
+                <h3 class="contact-title">Address:</h3>
+                <div class="address-item">
+                    <span class="address-icon"><i class="fa-solid fa-location-dot"></i></span>
+                    <div class="address-text">
+                        51,Rajaji Street,<br>
+                        GST Road,<br>
+                        Chengalpattu-603104
+                    </div>
+                </div>
+                <div class="address-item">
+                    <span class="address-icon"><i class="fa-solid fa-globe"></i></span>
+                    <a href="#" class="website-link address-text">www.DriveRp.in</a>
+                </div>
+                <div class="address-item">
+                    <span class="address-icon"><i class="fa-solid fa-phone"></i></span>
+                    <div class="address-text phone-number">+91 987 952 1234</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

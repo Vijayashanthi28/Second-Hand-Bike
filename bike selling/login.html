@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+     <nav class="navbar">
+        <div class="logo">
+            <img src="nav logo.png">
+        </div>
+        
+        <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="buy.html">Buy Bike</a></li>
+            <li><a href="sellbike.html">Sell Bike</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        
+        <div class="navright-section">
+          <a href="login.html"> <button class="login-btn">Login</button></a> 
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+    </nav>
+
+
+     <div class="auth-container">
+        <!-- Bike Image Section -->
+        <div class="bike-showcase">
+        <img src="login image.png" alt="Motorcycle">
+            </div>
+     
+
+        <!-- Login Form Section -->
+        <div class="credential-panel">
+            <h1 class="login-header">Log in</h1>
+            
+            <form id="authenticationForm">
+                <div class="field-group">
+                    <label for="username" class="field-label">User Name</label>
+                    <input type="text" id="username" class="user-input" placeholder="Enter your username" required>
+                </div>
+                
+                <div class="field-group">
+                    <label for="password" class="field-label">Password</label>
+                    <input type="password" id="password" class="user-input" placeholder="Enter your password" required>
+                </div>
+                
+                <div class="recovery-link">
+                    <a href="#" class="password-reset">Forgot Password</a>
+                </div>
+                
+                <button type="submit" class="access-button">Log in</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Notification -->
+    <div class="notification-overlay" id="loginNotification">
+        <div class="notification-card">
+            <div class="success-indicator">✓</div>
+            <div class="notification-title">Welcome Back!</div>
+            <div class="notification-message">You have successfully logged in to Drive RP. Redirecting to dashboard...</div>
+            <button class="dismiss-button" onclick="closeNotification()">Continue</button>
+        </div>
+    </div>
+
+     <footer class="footer-wrapper">
+        <div class="footer-container">
+            <!-- Brand and Social Section -->
+            <div class="brand-section">
+                <div class="brand-logo"><img src="footer logo.png"></div>
+                <div class="social-section">
+                    <div class="social-label">Get in touch</div>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon "><img src="whatsapp.jpg"></a>
+                        <a href="#" class="social-icon "><img src="youtube.png"></a>
+                        <a href="#" class="social-icon "><img src="insta.jpg"></a>
+                        <a href="#" class="social-icon "><img src="facebook.png"></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="navigation-section">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="contact.html" class="nav-link">Contact Us</a>
+                <a href="buy.html" class="nav-link">Buy Bike</a>
+                <a href="sellbike.html" class="nav-link">Sell Bike</a>
+            </div>
+
+            <!-- Categories Section -->
+            <div class="categories-section">
+                <a href="#" class="category-link">Electric Two-Wheelers</a>
+                <a href="#" class="category-link">Motorcycles</a>
+                <a href="#" class="category-link">Scooters</a>
+                <a href="#" class="category-link">Mopeds</a>
+                <a href="#" class="category-link">ATV</a>
+                <a href="#" class="category-link">Custom Bikes</a>
+                <div class="footbike-image"></div>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="contact-section">
+                <h3 class="contact-title">Address:</h3>
+                <div class="address-item">
+                    <span class="address-icon"><i class="fa-solid fa-location-dot"></i></span>
+                    <div class="address-text">
+                        51,Rajaji Street,<br>
+                        GST Road,<br>
+                        Chengalpattu-603104
+                    </div>
+                </div>
+                <div class="address-item">
+                    <span class="address-icon"><i class="fa-solid fa-globe"></i></span>
+                    <a href="#" class="website-link address-text">www.DriveRp.in</a>
+                </div>
+                <div class="address-item">
+                    <span class="address-icon"><i class="fa-solid fa-phone"></i></span>
+                    <div class="address-text phone-number">+91 987 952 1234</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+<script src="script.js"></script>
+</body>
+</html>
